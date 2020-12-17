@@ -1,21 +1,24 @@
 <template>
   <div>
-    <github-card v-model="username"></github-card>
+    <VueGithubFlair :username="username"></VueGithubFlair>
+<!--    <VueGithubFlair username="suaas21"></VueGithubFlair>
+    <VueGithubFlair username="Maxyee"></VueGithubFlair>-->
   </div>
 </template>
 
 <script>
-import GithubCard from "./components/GithubCard";
+// import GithubCard from "./components/GithubCard";
+import VueGithubFlair from "@/components/VueGithubFlair";
 
 export default {
   name: "App",
   data() {
     return {
-      username: "",
+      username: "tuhin47",
     };
   },
   components: {
-    GithubCard,
+    VueGithubFlair,
   },
 };
 </script>
