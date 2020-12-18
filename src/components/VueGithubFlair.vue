@@ -69,9 +69,6 @@ export default {
       GithubCardService.fetchUsername(this.user_name).then(
         this.getProfileByUsername
       );
-      GithubCardService.fetchReposByUsername(this.user_name).then(
-        this.getReposByUsername
-      );
     },
     getProfileByUsername(data) {
       this.user_name = "";
@@ -163,7 +160,7 @@ span {
   box-sizing: border-box;
   display: flex;
   align-items: stretch;
-  width: 220px;
+  width: 280px;
   color: rgb(255, 255, 255);
   border: 0.09rem solid rgb(36, 41, 46);
   background: rgb(36, 41, 46);
