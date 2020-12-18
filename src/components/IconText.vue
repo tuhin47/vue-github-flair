@@ -57,7 +57,4 @@ a:hover {
 span {
   color: white;
 }
-img.my-svg {
-  width: 20px;
-}
 </style>

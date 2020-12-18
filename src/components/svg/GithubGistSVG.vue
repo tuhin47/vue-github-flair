@@ -1,9 +1,9 @@
 <template>
   <svg
     height="12"
-    viewBox="0 -2 12 16"
+    viewBox="0 -2 16 16"
     width="12"
-    style="fill: rgb(255, 255, 255)"
+    style="fill: rgb(255, 255, 255); margin-left: 4%; margin-right: -2%"
   >
     <path
       fill-rule="evenodd"

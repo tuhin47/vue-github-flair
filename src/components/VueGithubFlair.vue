@@ -1,60 +1,30 @@
 <template>
-  <div
-    class="github-flair"
-    style="
-      box-sizing: border-box;
-      line-height: normal;
-      display: flex;
-      align-items: center;
-      width: 210px;
-      height: 60px;
-      color: rgb(255, 255, 255);
-      position: relative;
-      border: 2px solid rgb(36, 41, 46);
-      background: rgb(36, 41, 46);
-      border-radius: 3px;
-      padding: 5px 10px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol';
-    "
-  >
+  <div class="github-flair">
     <avatar-view :profile="profile" />
-    <div
-      class="info"
-      style="
-        width: 160px;
-        text-align: right;
-        font-size: 14px;
-        margin-right: -8px;
-      "
-    >
-      <div class="name" style="font-size: 14px">
-        <icon-text
-            :link="profile.url"
-            :text-field="username"
-            title="Github"
-        />
-
+    <div class="info">
+      <div class="row">
+        <icon-text :link="profile.url" :text-field="username" title="Github" />
       </div>
-      <div class="meta">
-        <icon-text
-          :link="'https://github.com/' + username + '?tab=followers'"
-          :text-field="profile.followers"
-          title="Followers"
-        />
-        <icon-text
-          :link="'https://github.com/' + username + '?tab=repositories'"
-          :text-field="profile.repos"
-          title="Repositories"
-        />
-        <icon-text
-          :link="'https://gist.github.com/' + username"
-          :text-field="profile.public_gists"
-          title="Gists"
-        />
+      <div class="row">
+        <span>
+          <icon-text
+            :link="'https://github.com/' + username + '?tab=followers'"
+            :text-field="profile.followers"
+            title="Followers"
+          />
+          <icon-text
+            :link="'https://github.com/' + username + '?tab=repositories'"
+            :text-field="profile.repos"
+            title="Repositories"
+          />
+          <icon-text
+            :link="'https://gist.github.com/' + username"
+            :text-field="profile.public_gists"
+            title="Gists"
+          />
+        </span>
       </div>
-      <div class="location">
+      <div class="row">
         <icon-text :text-field="profile.location" title="Location" />
       </div>
     </div>
@@ -172,5 +142,33 @@ a:hover {
 }
 span {
   color: white;
+}
+.info {
+  width: 70%;
+  margin-right: 0.1rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.info .row {
+  flex: 1;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.github-flair {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  width: 220px;
+  color: rgb(255, 255, 255);
+  border: 0.09rem solid rgb(36, 41, 46);
+  background: rgb(36, 41, 46);
+  border-radius: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 </style>
