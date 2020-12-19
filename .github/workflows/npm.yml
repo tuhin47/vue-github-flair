@@ -10,8 +10,9 @@ jobs:
 
     - uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
-        registry-url: 'https://registry.npmjs.org'
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
+        scope: getify
 
     - name: Install npm dependencies
       run: npm install
@@ -25,13 +26,15 @@ jobs:
         npm run build-plugin
     - name: Publish tag to npm
       if: contains(github.ref, 'tags')
-      run: npm publish
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
     - uses: actions/setup-node@v1
       with:
-        registry-url: 'https://npm.pkg.github.com/tuhin47'
+        registry-url: 'https://npm.pkg.github.com'
       
     - name: Publish tag to GPR
       run: npm publish
