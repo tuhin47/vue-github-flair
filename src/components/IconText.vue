@@ -15,7 +15,7 @@ import GithubFollowersSVG from "@/components/svg/GithubFollowersSVG";
 export default {
   name: "icon-text",
   props: {
-    textField: String,
+    textField: [String, Number],
     title: String,
     link: {
       default: "#",

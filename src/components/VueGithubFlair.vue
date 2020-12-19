@@ -42,6 +42,8 @@ export default {
   props: {
     username: {
       type: String,
+      default: "tuhin47",
+      required: true,
     },
   },
   data() {
@@ -142,7 +144,7 @@ span {
 }
 .info {
   width: 70%;
-  margin-right: 0.1rem;
+  margin-right: 0.3rem;
   text-align: right;
   display: flex;
   flex-direction: column;
