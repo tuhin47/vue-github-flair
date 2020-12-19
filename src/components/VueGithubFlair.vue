@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import GithubCardService from "./GithubCardService";
+// import GithubCardService from "./GithubCardService";
 import AvatarView from "@/components/AvatarView";
 import IconText from "@/components/IconText";
 
@@ -61,6 +61,15 @@ export default {
     }
   },
   methods: {
+    fetchUsername(username) {
+      return new Promise(function (resolve) {
+        fetch(`https://api.github.com/users/${username}`)
+            .then((res) => res.json())
+            .then((data) => {
+              resolve(data);
+            });
+      });
+    },
     onSubmit() {
       if (!!this.user_name && this.user_name.trim() === "") {
         return;
@@ -68,7 +77,7 @@ export default {
 
       this.user_name = this.user_name.trim();
 
-      GithubCardService.fetchUsername(this.user_name).then(
+      this.fetchUsername(this.user_name).then(
         this.getProfileByUsername
       );
     },
