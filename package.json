@@ -1,6 +1,6 @@
 {
   "name": "vue-github-flair",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "author": "Md. Towhidul Islam(tuhintowhidul9@gmail.com)",
   "scripts": {
@@ -15,9 +15,13 @@
   ],
   "license": "MIT",
   "repository": "https://github.com/tuhin47/vue-github-flair",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@<YOUR_USERNAME_OR_ORG_NAME>"
+  },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-github-flair": "^0.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
