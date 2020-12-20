@@ -1,4 +1,4 @@
-name: Node.js Package
+name: NPM
 on:
   release:
     types: [created]
@@ -13,6 +13,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm install && npm run build-plugin
+    - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
