@@ -1,5 +1,5 @@
 {
-  "name": "@tuhin47/vue-github-flair",
+  "name": "vue-github-flair",
   "version": "0.1.16",
   "private": false,
   "author": "Md. Towhidul Islam (tuhintowhidul9@gmail.com)",
@@ -17,9 +17,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tuhin47/vue-github-flair.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@tuhin47"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
