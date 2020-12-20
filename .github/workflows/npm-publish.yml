@@ -17,33 +17,36 @@ jobs:
           node-version: 12
       - run: npm install
   #      - run: npm test
-  publish-npm:
+
+  publish-gpr:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-          registry-url: https://registry.npmjs.org/
-          scope: getify
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
       - run: npm install
       - run: npm run build-plugin
-      - name: Publish to NPMJS
-        run: npm publish
+      - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-    #  publish-gpr:
-    #    needs: build
-    #    runs-on: ubuntu-latest
-    #    steps:
-    #      - uses: actions/checkout@v2
-    #      - uses: actions/setup-node@v1
-    #        with:
-    #          node-version: 12
-    #          registry-url: https://npm.pkg.github.com/
-    #      - run: npm install
-    #      - run: npm run build-plugin
-    #      - run: npm publish --access public
-    #        env:
-    #          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+#   publish-npm:
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v1
+#         with:
+#           node-version: 12
+#           registry-url: https://registry.npmjs.org/
+#           scope: getify
+#       - run: npm install
+#       - run: npm run build-plugin
+#       - name: Publish to NPMJS
+#         run: npm publish --access public
+#         env:
+#           CI: true
+#           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
