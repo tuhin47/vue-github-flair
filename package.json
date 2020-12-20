@@ -1,8 +1,8 @@
 {
-  "name": "vue-github-flair",
+  "name": "@tuhin47/vue-github-flair",
   "version": "0.1.8",
   "private": false,
-  "author": "Md. Towhidul Islam(tuhintowhidul9@gmail.com)",
+  "author": "Md. Towhidul Islam (tuhintowhidul9@gmail.com)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -14,9 +14,12 @@
     "dist/*"
   ],
   "license": "MIT",
-  "repository": "https://github.com/tuhin47/vue-github-flair",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuhin47/vue-github-flair.git"
+  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@<YOUR_USERNAME_OR_ORG_NAME>"
+    "registry": "https://npm.pkg.github.com/@tuhin47"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
@@ -57,5 +60,9 @@
     "not ie <= 8"
   ],
   "keywords": [],
-  "description": ""
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/tuhin47/vue-github-flair/issues"
+  },
+  "homepage": "https://github.com/tuhin47/vue-github-flair#readme"
 }
