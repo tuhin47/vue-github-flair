@@ -17,6 +17,8 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run build-plugin
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   #      - run: npm test
 
 #   publish-gpr:
