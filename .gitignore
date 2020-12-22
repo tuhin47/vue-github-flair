@@ -3,3 +3,4 @@
 /.codesandbox
 /dist
 *.iml
+*.log
