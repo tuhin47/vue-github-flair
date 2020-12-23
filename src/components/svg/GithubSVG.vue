@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: "GithubSVG.vue",
+  name: "GithubSVG",
 };
 </script>
