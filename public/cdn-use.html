@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://unpkg.com/vue-github-flair@0.1.19/dist/VueGithubFlair.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vue-github-flair</title>
+    <link rel="stylesheet" href="https://unpkg.com/browse/vue-github-flair@latest/dist/VueGithubFlair.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
-
-</head>
-<div id="app">
-    <vue-github-flair username="tuhin47"></vue-github-flair>
-</div>
-<body>
-<script src="https://unpkg.com/vue-github-flair@0.1.19/dist/VueGithubFlair.umd.min.js"></script>
-<script>
-    new Vue({
+  </head>
+  <body>
+    <div id="app">
+      <vue-github-flair username="tuhin47"></vue-github-flair>
+    </div>
+    <script src="https://unpkg.com/browse/vue-github-flair@latest/dist/VueGithubFlair.umd.min.js"></script>
+    <script>
+      new Vue({
         el: "#app",
         components: {
-            "vue-github-flair": window.VueGithubFlair.VueGithubFlair,
+          "vue-github-flair": window.VueGithubFlair.default,
         },
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>

@@ -18,12 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/tuhin47/vue-github-flair.git"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
     "vue": "^2.6.11",
-    "vue-github-flair": "^0.1.3"
-  },
-  "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
     "@vue/cli-service": "4.1.1",
     "babel-eslint": "^10.0.3",
@@ -56,7 +54,11 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "keywords": [],
+  "keywords": [
+    "Github",
+    "Vue",
+    "Flair"
+  ],
   "description": "",
   "bugs": {
     "url": "https://github.com/tuhin47/vue-github-flair/issues"
