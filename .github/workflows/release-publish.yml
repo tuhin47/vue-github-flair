@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm install && npm run build-plugin
+    - run: npm install && npm run build-plugin && cp public/cdn-use.html dist/
     - run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
     - run: npm publish
       env:
