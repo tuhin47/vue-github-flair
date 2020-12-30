@@ -57,7 +57,7 @@ export default {
   },
   mounted() {
     if (this.user_name) {
-      this.onSubmit();
+      this.onLoad();
     }
   },
   methods: {
@@ -70,7 +70,7 @@ export default {
             });
       });
     },
-    onSubmit() {
+    onLoad() {
       if (!!this.user_name && this.user_name.trim() === "") {
         return;
       }
